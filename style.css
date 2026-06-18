@@ -39,11 +39,11 @@ body{
 
 .hero-text{min-width:0}
 .site-title{
+	font-family:'Lobster', cursive;
 	font-size:clamp(28px,6vw,72px);
 	margin:0;
-	font-weight:800;
-	letter-spacing:4px;
-	text-transform:uppercase;
+	font-weight:400;
+	letter-spacing:2px;
 	color:var(--white);
 	line-height:1;
 }
