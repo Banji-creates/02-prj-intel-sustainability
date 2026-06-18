@@ -1,1 +1,146 @@
-/* Add your CSS here */
+/* Intel-branded hero/header styles */
+:root{
+	--intel-blue-1: #00C7FD; /* from logo */
+	--intel-blue-2: #0071C5; /* darker accent */
+	--white: #ffffff;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;}
+body{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: #f7f8fb;
+	color:#222;
+	line-height:1.4;
+}
+
+/* Hero */
+.hero{
+	background: linear-gradient(135deg,var(--intel-blue-1) 0%,var(--intel-blue-2) 70%);
+	color:var(--white);
+	padding:48px 20px;
+}
+.hero-content{
+	max-width:1100px;
+	margin:0 auto;
+	display:flex;
+	align-items:center;
+	justify-content:center; /* center logo + text */
+	gap:28px;
+	text-align:center; /* center headings when stacked */
+}
+
+.logo{
+	width:120px;
+	height:auto;
+	flex:0 0 auto;
+	display:block;
+}
+
+.hero-text{min-width:0}
+.site-title{
+	font-size:clamp(28px,6vw,72px);
+	margin:0;
+	font-weight:800;
+	letter-spacing:4px;
+	text-transform:uppercase;
+	color:var(--white);
+	line-height:1;
+}
+.site-subtitle{
+	margin-top:10px;
+	color:rgba(255,255,255,0.95);
+	font-size:clamp(13px,2.4vw,18px);
+	max-width:760px;
+}
+
+/* Accessibility: ensure sufficient contrast for smaller text */
+@media (max-width:600px){
+	.hero{padding:28px 16px}
+	.hero-content{flex-direction:column;gap:12px}
+	.logo{width:84px;margin:0}
+	.site-title{font-size:clamp(22px,9vw,44px);letter-spacing:2px}
+}
+
+/* Keep page content readable below the hero */
+section{padding:32px 20px;max-width:1100px;margin:0 auto}
+
+/* Small utility */
+p{margin:0 0 12px}
+/* Timeline / Milestones */
+.timeline{padding:28px 0 60px}
+.milestones{
+	display:flex;
+	gap:20px;
+	overflow-x:auto;
+	padding:18px 16px;
+	scroll-snap-type:x mandatory;
+	-webkit-overflow-scrolling:touch;
+	scroll-padding:48px; /* ensures centered snap looks good */
+}
+.milestones:focus{outline:none}
+.milestone-card{
+	scroll-snap-align:center;
+	flex:0 0 320px;
+	background: #ffffff;
+	color:#111;
+	border-radius:12px;
+	padding:18px;
+	box-shadow:0 6px 18px rgba(2,24,48,0.10);
+	border-left:6px solid var(--intel-blue-1);
+	transition:transform .26s cubic-bezier(.2,.9,.2,1),box-shadow .26s ease,filter .26s ease;
+	position:relative;
+}
+.milestone-card h2{font-size:18px;color:var(--intel-blue-2);margin-bottom:6px}
+.milestone-card h3{font-size:16px;margin:0 0 8px}
+.milestone-card .summary{color:#333;font-size:14px}
+.milestone-card .details{
+	margin-top:12px;
+	color:#222;
+	font-size:13px;
+	max-height:0;
+	overflow:hidden;
+	opacity:0;
+	transition:max-height .28s ease,opacity .28s ease;
+}
+
+/* Hover / focus reveal */
+.milestone-card:hover,.milestone-card:focus{
+	transform:translateY(-10px) scale(1.03);
+	box-shadow:0 22px 44px rgba(2,24,48,0.20);
+	filter:brightness(1.01);
+}
+.milestone-card:hover .details,.milestone-card:focus .details{
+	max-height:240px;
+	opacity:1;
+}
+
+/* visual accent on hover */
+.milestone-card::after{
+	content:"";
+	position:absolute;
+	left:0;right:0;bottom:-8px;
+	height:10px;
+	background:linear-gradient(90deg, rgba(0,199,253,0.06), rgba(0,113,197,0.06));
+	border-radius:8px;
+	opacity:0;transition:opacity .26s ease,transform .26s ease;
+}
+.milestone-card:hover::after,.milestone-card:focus::after{opacity:1;transform:translateY(-6px)}
+
+/* Milestone image styling */
+.milestone-image{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:12px;display:block}
+
+/* Scrollbar - subtle */
+.milestones::-webkit-scrollbar{height:10px}
+.milestones::-webkit-scrollbar-thumb{background:linear-gradient(#00C7FD,#0071C5);border-radius:999px;opacity:0.9}
+.milestones::-webkit-scrollbar-track{background:transparent}
+
+/* For keyboard users - allow reveal when focused via tabindex */
+.milestone-card:focus{outline:2px solid rgba(0,199,253,0.12);outline-offset:3px}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width:780px){
+	.milestones{flex-direction:column;overflow-x:visible;padding:0}
+	.milestone-card{flex:1 1 auto;width:auto}
+}
+

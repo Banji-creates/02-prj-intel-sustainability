@@ -9,133 +9,110 @@
 <body>
 
   <!-- Header / Hero Section -->
-  <header>
-    <div>
-      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
-      <!-- Main Heading -->
-      <h1>
-        Sustainability Through the Ages
-      </h1>
+  <header class="hero">
+    <div class="hero-content">
+      <!-- Logo (resize with CSS) -->
+      <img class="logo" src="img/intel-header-logo.svg" alt="Intel logo" />
 
-      <!-- Subheading / Description -->
-      <p>
-        Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
-        and our planet.
-      </p>
+      <!-- Main Heading -->
+      <div class="hero-text">
+        <h1 class="site-title">INTEL</h1>
+
+        <!-- Subheading / Description -->
+        <p class="site-subtitle">
+          Explore Intel's journey through time, discovering how our commitment
+          to innovation has shaped a more sustainable future for technology
+          and our planet.
+        </p>
+      </div>
     </div>
   </header>
 
   <!-- Timeline Cards Section -->
-  <section>
+  <section class="timeline">
+    <div class="milestones" tabindex="0" aria-label="Intel milestones timeline">
 
-    <!-- Card 1: 1968 -->
-    <div>
-      <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <!-- Add image -->
-      <p>
-        Robert Noyce and Gordon Moore rename the newly formed company 
-        NM Electronics to Intel Corporation, laying the foundation for 
-        decades of technological innovation.
-      </p>
-    </div>
+      <!-- Card 1: 1968 -->
+      <article class="milestone-card" tabindex="0">
+        <img class="milestone-image" src="img/milestone-1968.svg" alt="1968 illustration" />
+        <h2>1968</h2>
+        <h3>Intel Founded</h3>
+        <p class="summary">Robert Noyce and Gordon Moore rename NM Electronics to Intel Corporation.</p>
+        <p class="details">Founding set the stage for decades of semiconductor innovation and leadership.</p>
+      </article>
 
-    <!-- Card 2: 1971 -->
-    <div>
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <!-- Add image -->
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
-        of computing devices.
-      </p>
-    </div>
+      <!-- Card 2: 1971 -->
+      <article class="milestone-card" tabindex="0">
+        <img class="milestone-image" src="img/milestone-1971.svg" alt="1971 illustration" />
+        <h2>1971</h2>
+        <h3>First Microprocessor</h3>
+        <p class="summary">Intel debuts the 4004, the world's first commercial microprocessor.</p>
+        <p class="details">The 4004 launched the microprocessor era and enabled compact computing devices.</p>
+      </article>
 
-    <!-- Card 3: 1978 -->
-    <div>
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <!-- Add image -->
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
-        that drives countless PCs and servers in the modern era.
-      </p>
-    </div>
+      <!-- Card 3: 1978 -->
+      <article class="milestone-card" tabindex="0">
+        <img class="milestone-image" src="img/milestone-1978.svg" alt="1978 illustration" />
+        <h2>1978</h2>
+        <h3>8086 Processor</h3>
+        <p class="summary">Launch of the 8086 processor, establishing the x86 architecture.</p>
+        <p class="details">x86 became foundational for personal computers and servers worldwide.</p>
+      </article>
 
-    <!-- Card 4: 1985 -->
-    <div>
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <!-- Add image -->
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
-        personal computers.
-      </p>
-    </div>
+      <!-- Card 4: 1985 -->
+      <article class="milestone-card" tabindex="0">
+        <img class="milestone-image" src="img/milestone-1985.svg" alt="1985 illustration" />
+        <h2>1985</h2>
+        <h3>386 Processor</h3>
+        <p class="summary">Intel introduces the 386 processor with 32-bit architecture.</p>
+        <p class="details">The 386 enabled advanced multitasking and more powerful PC applications.</p>
+      </article>
 
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <!-- Add image -->
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
-    </div>
+      <!-- Card 5: 2006 -->
+      <article class="milestone-card" tabindex="0">
+        <img class="milestone-image" src="img/milestone-2006.svg" alt="2006 illustration" />
+        <h2>2006</h2>
+        <h3>Peak GHG Emissions</h3>
+        <p class="summary">Intel records its highest annual greenhouse gas emissions for operations.</p>
+        <p class="details">Subsequent investments in energy efficiency and renewables drove long-term reductions.</p>
+      </article>
 
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <!-- Add image -->
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
-    </div>
+      <!-- Card 6: 2020 -->
+      <article class="milestone-card" tabindex="0">
+        <img class="milestone-image" src="img/milestone-2020.svg" alt="2020 illustration" />
+        <h2>2020</h2>
+        <h3>RISE Strategy</h3>
+        <p class="summary">Intel launches its RISE strategy and 2030 sustainability goals.</p>
+        <p class="details">RISE focuses on responsible supply chains, inclusion, sustainability, and enabling partners.</p>
+      </article>
 
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <!-- Add image -->
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-    </div>
+      <!-- Card 7: 2022 -->
+      <article class="milestone-card" tabindex="0">
+        <img class="milestone-image" src="img/milestone-2022.svg" alt="2022 illustration" />
+        <h2>2022</h2>
+        <h3>Net-Zero By 2040</h3>
+        <p class="summary">Intel commits to net-zero Scope 1 and 2 greenhouse gas emissions by 2040.</p>
+        <p class="details">This builds on years of emissions reductions and renewable energy adoption.</p>
+      </article>
 
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <!-- Add image -->
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
-    </div>
+      <!-- Card 8: 2023 -->
+      <article class="milestone-card" tabindex="0">
+        <img class="milestone-image" src="img/milestone-2023.svg" alt="2023 illustration" />
+        <h2>2023</h2>
+        <h3>Renewable Electricity</h3>
+        <p class="summary">Intel achieves 99% renewable electricity usage worldwide.</p>
+        <p class="details">Near-universal renewable sourcing significantly reduced operational carbon intensity.</p>
+      </article>
 
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <!-- Add image -->
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
+      <!-- Card 9: 2024 -->
+      <article class="milestone-card" tabindex="0">
+        <img class="milestone-image" src="img/milestone-2024.svg" alt="2024 illustration" />
+        <h2>2024</h2>
+        <h3>Sustainability Summit</h3>
+        <p class="summary">Intel hosts its first Sustainability Summit, uniting industry stakeholders.</p>
+        <p class="details">The summit focused on supplier collaboration, policy, and next-gen sustainable manufacturing.</p>
+      </article>
+
     </div>
   </section>
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
